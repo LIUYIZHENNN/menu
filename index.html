@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>美味家常品項</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f7fa;
+            line-height: 1.6;
+        }
+        .title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(to right, #fff, #f8f9fa, #fff);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            letter-spacing: 2px;
+        }
+        .section {
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .section-title {
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            padding: 15px 25px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 1px;
+        }
+        .section-title:before {
+            margin-right: 12px;
+            font-size: 24px;
+        }
+        .item {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eef0f5;
+            transition: all 0.3s ease;
+        }
+        .item:hover {
+            background: #f8faff;
+        }
+        .item:last-child {
+            border-bottom: none;
+        }
+        .item-title {
+            font-size: 17px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .price {
+            color: #e53935;
+            font-weight: bold;
+            font-size: 18px;
+            background: #fff5f5;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .note {
+            color: #666;
+            font-size: 15px;
+            margin-top: 4px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .note:before {
+            content: '•';
+            position: absolute;
+            left: 8px;
+            color: #4a90e2;
+        }
+        .sub-item {
+            margin-top: 10px;
+            background: #fff8ed;
+            padding: 8px 15px;
+            border-radius: 8px;
+            color: #d35400;
+            font-size: 15px;
+            font-weight: 500;
+            display: inline-block;
+            border: 1px dashed #ffcc80;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            background: white;
+            border-radius: 12px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+        .footer:before, .footer:after {
+            content: '•';
+            margin: 0 10px;
+            color: #4a90e2;
+        }
+        /* 每個區塊的圖示 */
+        .section-title.radish:before { content: '🥘'; }
+        .section-title.noodle:before { content: '🍜'; }
+        .section-title.frozen:before { content: '❄️'; }
+        .section-title.other:before { content: '🍗'; }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .section {
+                box-shadow: none;
+                border: 1px solid #eee;
+                break-inside: avoid;
+            }
+            .section-title {
+                background: #4a90e2;
+            }
+            .footer {
+                box-shadow: none;
+                border: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="title">美味家常品項</div>
+    
+    <div class="section">
+        <div class="section-title radish">手工蘿蔔糕系列</div>
+        <div class="item">
+            <div class="item-title">
+                <span>港式原味/油蔥蘿蔔糕</span>
+                <span class="price">$80</span>
+            </div>
+            <div class="note">10片一條裝</div>
+            <div class="note">保存期限：冷藏25天以內</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>芋頭蘿蔔糕</span>
+                <span class="price">$110</span>
+            </div>
+            <div class="note">10片一條裝</div>
+            <div class="note">保存期限：冷藏25天以內</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title noodle">麵食系列</div>
+        <div class="item">
+            <div class="item-title">
+                <span>鐵板麵（蘑菇、黑胡椒）</span>
+                <span class="price">$85</span>
+            </div>
+            <div class="note">一組內含：5油麵+5醬料</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+            <div class="sub-item">🔸 醬料分售（10包）- $140</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>義大利肉醬烏龍麵</span>
+                <span class="price">$110</span>
+            </div>
+            <div class="note">一組內含：5包烏龍麵+醬料</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+            <div class="sub-item">🔸 醬料分售（10包）- $190</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>奶油培根白醬烏龍麵</span>
+                <span class="price">$110</span>
+            </div>
+            <div class="note">一組內含：5包烏龍麵+醬料</div>
+            <div class="note">保存期限：醬料冷藏2週、麵體冷藏2週</div>
+            <div class="sub-item">🔸 醬料分售（10包）- $190</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>日式照燒肉醬豆菜麵</span>
+                <span class="price">$220</span>
+            </div>
+            <div class="note">一組內含：10包豆菜麵+醬料</div>
+            <div class="note">保存期限：醬料冷藏2個月、麵體冷藏2週</div>
+            <div class="sub-item">🔸 醬料分售（10包）- $190</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>塔香辣肉燥麵</span>
+                <span class="price">$130</span>
+            </div>
+            <div class="note">一組內含：5包冷凍油麵+醬料</div>
+            <div class="note">保存期限：醬料冷凍1年、麵體冷凍6個月</div>
+            <div class="sub-item">🔸 醬料分售（10包）- $230</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>塔香肉燥麵（不辣）</span>
+                <span class="price">$130</span>
+            </div>
+            <div class="note">一組內含：5包冷凍油麵+醬料</div>
+            <div class="note">保存期限：醬料冷凍1年、麵體冷凍6個月</div>
+            <div class="sub-item">🔸 醬料分售（10包）- $230</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title frozen">冷凍食品系列</div>
+        <div class="item">
+            <div class="item-title">
+                <span>黃金酥皮蛋餅皮</span>
+                <span class="price">$50</span>
+            </div>
+            <div class="note">10片/包</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>全麥蛋餅皮</span>
+                <span class="price">$65</span>
+            </div>
+            <div class="note">10片/包</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>黑胡椒豬排</span>
+                <span class="price">$250</span>
+            </div>
+            <div class="note">20片/盒</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>蔥抓餅</span>
+                <span class="price">$120</span>
+            </div>
+            <div class="note">10片/包</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>翡翠蔥抓餅</span>
+                <span class="price">$120</span>
+            </div>
+            <div class="note">10片/包</div>
+            <div class="note">保存期限：冷凍保存6個月</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title other">其他商品</div>
+        <div class="item">
+            <div class="item-title">
+                <span>西西里雞腿排</span>
+                <span class="price">$310</span>
+            </div>
+            <div class="note">12片/包</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>勁辣黃金雞腿排</span>
+                <span class="price">$310</span>
+            </div>
+            <div class="note">12片/包</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>荷蘭小鬆餅</span>
+                <span class="price">$200</span>
+            </div>
+            <div class="note">500g/包</div>
+        </div>
+        <div class="item">
+            <div class="item-title">
+                <span>小肉豆</span>
+                <span class="price">$200</span>
+            </div>
+            <div class="note">每包</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        歡迎選購 • 價格如有變動以實際報價為準
+    </div>
+</body>
+</html>
