@@ -15,7 +15,7 @@
         .title {
             text-align: center;
             color: #2c3e50;
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 30px;
             padding: 20px;
             background: linear-gradient(to right, #fff, #f8f9fa, #fff);
@@ -35,7 +35,7 @@
             background: linear-gradient(135deg, #4a90e2, #357abd);
             color: white;
             padding: 15px 25px;
-            font-size: 20px;
+            font-size: 22px;
             display: flex;
             align-items: center;
             letter-spacing: 1px;
@@ -56,9 +56,9 @@
             border-bottom: none;
         }
         .item-title {
-            font-size: 17px;
+            font-size: 20px;  /* 增加品項字體大小 */
             color: #2c3e50;
-            margin-bottom: 8px;
+            margin-bottom: 12px;  /* 增加與說明文字的間距 */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -66,31 +66,32 @@
         .price {
             color: #e53935;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;  /* 配合品項名稱大小 */
             background: #fff5f5;
             padding: 4px 12px;
             border-radius: 20px;
         }
         .note {
             color: #666;
-            font-size: 15px;
-            margin-top: 4px;
-            padding-left: 20px;
+            font-size: 13px;  /* 縮小說明文字 */
+            margin-top: 3px;
+            padding-left: 16px;  /* 縮小縮排 */
             position: relative;
         }
         .note:before {
             content: '•';
             position: absolute;
-            left: 8px;
+            left: 6px;
             color: #4a90e2;
+            font-size: 12px;  /* 縮小圓點大小 */
         }
         .sub-item {
-            margin-top: 10px;
+            margin-top: 8px;
             background: #fff8ed;
-            padding: 8px 15px;
+            padding: 6px 12px;
             border-radius: 8px;
             color: #d35400;
-            font-size: 15px;
+            font-size: 14px;  /* 稍微縮小分售資訊 */
             font-weight: 500;
             display: inline-block;
             border: 1px dashed #ffcc80;
@@ -111,7 +112,6 @@
             margin: 0 10px;
             color: #4a90e2;
         }
-        /* 每個區塊的圖示 */
         .section-title.radish:before { content: '🥘'; }
         .section-title.noodle:before { content: '🍜'; }
         .section-title.frozen:before { content: '❄️'; }
@@ -137,6 +137,7 @@
     </style>
 </head>
 <body>
+    <!-- 其餘HTML內容保持不變 -->
     <div class="title">美味家常品項</div>
     
     <div class="section">
